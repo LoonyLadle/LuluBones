@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<ModMetaData>
+  <name>Lulu's Bones and Chitin</name>
+  <author>LoonyLadle</author>
+  <url>https://github.com/LoonyLadle/LuluBones</url>
+  <supportedVersions>
+    <li>1.0</li>
+  </supportedVersions>
+  <description>Adds bones and chitin as new woody materials.</description>
+</ModMetaData>

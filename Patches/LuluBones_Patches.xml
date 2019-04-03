@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Patch>
+  <Operation Class="PatchOperationSequence">
+    <operations>
+
+      <!-- Adds bones to standard base things. -->
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[@Name="AnimalThingBase"]/statBases</xpath>
+        <value>
+          <BoneAmount>20</BoneAmount>
+        </value>
+      </li>
+
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[@Name="BaseInsect"]/statBases</xpath>
+        <value>
+          <BoneAmount>50</BoneAmount>
+        </value>
+      </li>
+
+      <!-- Allow bone to be used as fuel wherever wood is. -->
+      <li Class="PatchOperationInsert">
+        <xpath>Defs/ThingDef/comps/li[@Class="CompProperties_Refuelable"]/fuelFilter/thingDefs/li[text()="WoodLog"]</xpath>
+        <value>
+          <li>LuluBones_Bone</li>
+        </value>
+      </li>
+
+      <!-- Groups bones with wood in ThingSetMakers; this mostly just prevents them from spawning in weapon stockpiles. -->
+      <li Class="PatchOperationInsert">
+        <xpath>Defs/ThingSetMakerDef//li[text()="WoodLog"]</xpath>
+        <value>
+          <li>LuluBones_Bone</li>
+        </value>
+      </li>
+
+      <!-- Don't default allow bones to be used to make blunt weapons. -->
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[@Name="BaseMeleeWeapon_Blunt"]/recipeMaker/defaultIngredientFilter/disallowedThingDefs</xpath>
+        <value>
+          <li>LuluBones_Bone</li>
+        </value>
+      </li>
+
+      <!-- Allow bone and chitin to be processed into chemfuel using the same recipe as for wood (this allows mixing ingredients). -->
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/RecipeDef[defName="Make_ChemfuelFromWood"]//thingDefs</xpath>
+        <value>
+          <li>LuluBones_Bone</li>
+          <li>LuluBones_Chitin</li>
+        </value>
+      </li>
+
+    </operations>
+  </Operation>
+</Patch>
