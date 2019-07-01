@@ -8,7 +8,7 @@
     <graphicData>
       <texPath>Lulu/Bones/Bone</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
-      <color>(227,218,201)</color>
+      <color>(219,194,171)</color>
     </graphicData>
     <equippedAngleOffset>-20</equippedAngleOffset>
     <soundInteract>Wood_Drop</soundInteract>
@@ -32,7 +32,7 @@
         <li>Woody</li>
       </categories>
       <commonality>1.00</commonality>
-      <color>(227,218,201)</color>
+      <color>(219,194,171)</color>
       <constructEffect>ConstructWood</constructEffect>
       <appearance>Planks</appearance>
       <soundImpactStuff>BulletImpact_Wood</soundImpactStuff>
@@ -62,18 +62,6 @@
     </tools>
   </ThingDef>
 
-  <!--<ThingDef ParentName="LuluBones_Bone">
-    <defName>LuluBones_BoneHumanlike</defName>
-    <label>human bone</label>
-    <description>The humanitarian way to build.</description>
-    <graphicData>
-      <color>(230,201,196)</color>
-    </graphicData>
-    <stuffProps>
-      <color>(230,201,196)</color>
-    </stuffProps>
-  </ThingDef>-->
-
   <ThingDef ParentName="ResourceBase">
     <defName>LuluBones_Chitin</defName>
     <label>chitin</label>
@@ -93,7 +81,7 @@
       <Flammability>1.0</Flammability>
       <DeteriorationRate>0.5</DeteriorationRate>
       <StuffPower_Armor_Sharp>0.9</StuffPower_Armor_Sharp>
-      <StuffPower_Armor_Blunt>0.59</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Blunt>0.6</StuffPower_Armor_Blunt>
       <StuffPower_Armor_Heat>1</StuffPower_Armor_Heat>
       <StuffPower_Insulation_Cold>4</StuffPower_Insulation_Cold>
       <StuffPower_Insulation_Heat>8</StuffPower_Insulation_Heat>
