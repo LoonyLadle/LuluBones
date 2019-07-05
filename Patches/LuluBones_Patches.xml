@@ -93,6 +93,9 @@
           <li Class="PatchOperationRemove">
             <xpath>Defs/ThingDef[defName="Campfire"]/costList</xpath>
           </li>
+          <li Class="PatchOperationRemove">
+            <xpath>Defs/ThingDef[defName="Campfire"]/constructEffect</xpath>
+          </li>
           <li Class="PatchOperationReplace">
             <xpath>Defs/ThingDef[defName="Campfire"]/graphicData/texPath</xpath>
             <value>
@@ -127,6 +130,9 @@
           <li Class="PatchOperationRemove">
             <xpath>Defs/ThingDef[defName="PassiveCooler"]/costList</xpath>
           </li>
+          <li Class="PatchOperationRemove">
+            <xpath>Defs/ThingDef[defName="PassiveCooler"]/constructEffect</xpath>
+          </li>
           <li Class="PatchOperationReplace">
             <xpath>Defs/ThingDef[defName="PassiveCooler"]/graphicData/texPath</xpath>
             <value>
@@ -160,6 +166,9 @@
           </li>
           <li Class="PatchOperationRemove">
             <xpath>Defs/ThingDef[defName="TorchLamp"]/costList</xpath>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>Defs/ThingDef[defName="TorchLamp"]/constructEffect</xpath>
           </li>
           <li Class="PatchOperationReplace">
             <xpath>Defs/ThingDef[defName="TorchLamp"]/graphicData/texPath</xpath>
