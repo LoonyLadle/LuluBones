@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<ModSyncNinjaData>
+  <ID>26418646-288f-4b7c-9a2c-26937c751782</ID>
+  <ModName>Lulu's Bones and Chitin</ModName>
+  <Version>1.1.1</Version>
+  <SaveBreaking>False</SaveBreaking>
+  <Host name="Github">
+    <Owner>LoonyLadle</Owner>
+    <Project>LuluBones</Project>
+    <AboutDir>About</AboutDir>
+    <DownloadFrom>ModSyncReleases</DownloadFrom>
+    <Branch>master</Branch>
+  </Host>
+</ModSyncNinjaData>
