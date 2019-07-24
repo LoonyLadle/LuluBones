@@ -79,15 +79,10 @@
           <li Class="PatchOperationAdd">
             <xpath>Defs/ThingDef[defName="Campfire"]</xpath>
             <value>
+              <costStuffCount>20</costStuffCount>
               <stuffCategories>
                 <li>Woody</li>
               </stuffCategories>
-            </value>
-          </li>
-          <li Class="PatchOperationAdd">
-            <xpath>Defs/ThingDef[defName="Campfire"]</xpath>
-            <value>
-              <costStuffCount>20</costStuffCount>
             </value>
           </li>
           <li Class="PatchOperationRemove">
@@ -116,15 +111,10 @@
           <li Class="PatchOperationAdd">
             <xpath>Defs/ThingDef[defName="PassiveCooler"]</xpath>
             <value>
+              <costStuffCount>50</costStuffCount>
               <stuffCategories>
                 <li>Woody</li>
               </stuffCategories>
-            </value>
-          </li>
-          <li Class="PatchOperationAdd">
-            <xpath>Defs/ThingDef[defName="PassiveCooler"]</xpath>
-            <value>
-              <costStuffCount>50</costStuffCount>
             </value>
           </li>
           <li Class="PatchOperationRemove">
@@ -153,15 +143,10 @@
           <li Class="PatchOperationAdd">
             <xpath>Defs/ThingDef[defName="TorchLamp"]</xpath>
             <value>
+              <costStuffCount>20</costStuffCount>
               <stuffCategories>
                 <li>Woody</li>
               </stuffCategories>
-            </value>
-          </li>
-          <li Class="PatchOperationAdd">
-            <xpath>Defs/ThingDef[defName="TorchLamp"]</xpath>
-            <value>
-              <costStuffCount>20</costStuffCount>
             </value>
           </li>
           <li Class="PatchOperationRemove">
