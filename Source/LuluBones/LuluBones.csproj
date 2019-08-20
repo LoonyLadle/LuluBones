@@ -36,7 +36,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Assembly-CSharp">
-      <HintPath>..\..\..\..\_Games\RimWorld2150Win64\RimWorld2150Win64_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
@@ -45,14 +45,13 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="UnityEngine">
-      <HintPath>..\..\..\..\_Games\RimWorld2150Win64\RimWorld2150Win64_Data\Managed\UnityEngine.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BoneUtility.cs" />
-    <Compile Include="HarmonyPatches.cs" />
+    <Compile Include="MyStaticConstructor.cs" />
+    <Compile Include="BoneProductExt.cs" />
+    <Compile Include="HarmonyPatches\HarmonyPatch_Corpse_SpecialDisplayStats.cs" />
+    <Compile Include="HarmonyPatches\HarmonyPatch_Pawn_ButcherProducts.cs" />
     <Compile Include="MyDefOf.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

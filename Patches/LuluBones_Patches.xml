@@ -42,13 +42,30 @@
         </value>
       </li>
 
-      <!-- Allow bone and chitin to be processed into chemfuel using the same recipe as for wood (this allows mixing ingredients). -->
+      <!-- Allow bone and chitin to be processed into chemfuel using the same recipe as for wood. -->
       <li Class="PatchOperationAdd">
         <xpath>Defs/RecipeDef[defName="Make_ChemfuelFromWood"]//thingDefs</xpath>
         <value>
           <li>LuluBones_Bone</li>
           <li>LuluBones_Chitin</li>
         </value>
+      </li>
+
+      <!-- Allow mixing of ingredients when making chemfuel from wood. -->
+      <li Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationTest">
+            <xpath>Defs/RecipeDef[defName="Make_ChemfuelFromWood"]/allowMixingIngredients</xpath>
+            <success>Invert</success>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="Make_ChemfuelFromWood"]</xpath>
+            <value>
+              <allowMixingIngredients>true</allowMixingIngredients>
+            </value>
+          </li>
+        </operations>
       </li>
 
       <!-- Allows woody materials to be used for knives; longswords can be wooden, why not knives?! -->

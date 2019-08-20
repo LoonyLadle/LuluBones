@@ -9,17 +9,20 @@ namespace LoonyLadle.Bones
     {
         public static ThingDef GetBoneProductFor(Pawn pawn)
         {
-            if (pawn.def.race.FleshType == FleshTypeDefOf.Insectoid)
+            ThingDef specialBoneProduct = pawn.def.GetModExtension<BoneProductExt>()?.boneDef;
+
+            if (specialBoneProduct != null)
+            {
+                return specialBoneProduct;
+            }
+            else if (pawn.def.race.FleshType == FleshTypeDefOf.Insectoid)
             {
                 return MyDefOf.LuluBones_Chitin;
             }
-            /*
-            if (pawn.def.race.intelligence == Intelligence.Humanlike)
+            else
             {
-                return MyDefOf.LuluBones_BoneHumanlike;
+                return MyDefOf.LuluBones_Bone;
             }
-            */
-            return MyDefOf.LuluBones_Bone;
         }
     }
 }

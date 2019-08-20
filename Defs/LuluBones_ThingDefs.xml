@@ -3,7 +3,7 @@
   <ThingDef ParentName="ResourceVerbBase" Name="LuluBones_Bone">
     <defName>LuluBones_Bone</defName>
     <label>bone</label>
-    <description>Bone is the non-vegan alternative to wood.</description>
+    <description>Bone from a vertebrate animal. Useful for building structures and sharp weapons. It is a good fuel for campfires and generators, and can be refined into chemfuel. In a pinch, a bone can be used as a weapon.</description>
     <graphicData>
       <texPath>Lulu/Bones/Bone</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
@@ -70,7 +70,6 @@
       <graphicClass>Graphic_StackCount</graphicClass>
       <color>(156,148,125)</color>
     </graphicData>
-    <equippedAngleOffset>-20</equippedAngleOffset>
     <soundInteract>Wood_Drop</soundInteract>
     <soundDrop>Wood_Drop</soundDrop>
     <statBases>
@@ -94,13 +93,13 @@
       <commonality>0.1</commonality>
       <color>(156,148,125)</color>
       <constructEffect>ConstructWood</constructEffect>
-      <appearance>Planks</appearance>
+      <appearance>Smooth</appearance>
       <soundImpactStuff>BulletImpact_Wood</soundImpactStuff>
       <soundMeleeHitSharp>MeleeHit_Wood</soundMeleeHitSharp>
       <soundMeleeHitBlunt>MeleeHit_Wood</soundMeleeHitBlunt>
       <statFactors>
         <MaxHitPoints>0.85</MaxHitPoints>
-        <Beauty>1</Beauty>
+        <Beauty>0.5</Beauty>
         <Flammability>0.5</Flammability>
         <WorkToMake>0.9</WorkToMake>
         <WorkToBuild>0.9</WorkToBuild>
