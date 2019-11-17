@@ -5,16 +5,16 @@ using Verse;
 
 namespace LoonyLadle.Bones
 {
-    [DefOf]
-    public static class MyDefOf
-    {
-        static MyDefOf()
-        {
-            DefOfHelper.EnsureInitializedInCtor(typeof(MyDefOf));
-        }
+	[DefOf]
+	public static class MyDefOf
+	{
+		static MyDefOf()
+		{
+			DefOfHelper.EnsureInitializedInCtor(typeof(MyDefOf));
+		}
 
-        public static StatDef BoneAmount;
-        public static ThingDef LuluBones_Bone;
-        public static ThingDef LuluBones_Chitin;
-    }
+		public static StatDef BoneAmount;
+		public static ThingDef LuluBones_Bone;
+		public static ThingDef LuluBones_Chitin;
+	}
 }
