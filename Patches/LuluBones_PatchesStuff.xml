@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Patch>
+
+	<!-- Make campfires stuffed. -->
+	<Operation Class="PatchOperationConditional">
+		<success>Always</success>
+		<xpath>Defs/ThingDef[defName="Campfire"]/stuffCategories</xpath>
+		<nomatch Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="Campfire"]</xpath>
+					<value>
+						<costStuffCount>20</costStuffCount>
+						<stuffCategories>
+							<li>Woody</li>
+						</stuffCategories>
+					</value>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[defName="Campfire"]/costList</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[defName="Campfire"]/constructEffect</xpath>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="Campfire"]/graphicData/texPath</xpath>
+					<value>
+						<texPath>Lulu/Bones/Stuffed/Campfire</texPath>
+					</value>
+				</li>
+			</operations>
+		</nomatch>
+	</Operation>
+
+	<!-- Make passive coolers stuffed. -->
+	<Operation Class="PatchOperationConditional">
+		<success>Always</success>
+		<xpath>Defs/ThingDef[defName="PassiveCooler"]/stuffCategories</xpath>
+		<nomatch Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="PassiveCooler"]</xpath>
+					<value>
+						<costStuffCount>50</costStuffCount>
+						<stuffCategories>
+							<li>Woody</li>
+						</stuffCategories>
+					</value>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[defName="PassiveCooler"]/costList</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[defName="PassiveCooler"]/constructEffect</xpath>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="PassiveCooler"]/graphicData/texPath</xpath>
+					<value>
+						<texPath>Lulu/Bones/Stuffed/PassiveCooler</texPath>
+					</value>
+				</li>
+			</operations>
+		</nomatch>
+	</Operation>
+
+	<!-- Make torch lamps stuffed. -->
+	<Operation Class="PatchOperationConditional">
+		<success>Always</success>
+		<xpath>Defs/ThingDef[defName="TorchLamp"]/stuffCategories</xpath>
+		<nomatch Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="TorchLamp"]</xpath>
+					<value>
+						<costStuffCount>20</costStuffCount>
+						<stuffCategories>
+							<li>Woody</li>
+						</stuffCategories>
+					</value>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[defName="TorchLamp"]/costList</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ThingDef[defName="TorchLamp"]/constructEffect</xpath>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="TorchLamp"]/graphicData/texPath</xpath>
+					<value>
+						<texPath>Lulu/Bones/Stuffed/TorchLamp</texPath>
+					</value>
+				</li>
+			</operations>
+		</nomatch>
+	</Operation>
+
+</Patch>
