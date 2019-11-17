@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <Defs>
-  <StatDef>
-    <defName>BoneAmount</defName>
-    <label>bone amount</label>
-    <description>The amount of bone yielded when butchering this creature.</description>
-    <category>BasicsPawn</category>
-    <defaultBaseValue>0</defaultBaseValue>
-    <minValue>0</minValue>
-    <toStringStyle>Integer</toStringStyle>
-    <hideAtValue>0</hideAtValue>
-    <parts>
-      <li Class="StatPart_BodySize" />
-      <li Class="StatPart_NaturalNotMissingBodyPartsCoverage" />
-    </parts>
-    <postProcessCurve>
-      <points>
-        <li>(0,0)</li>
-        <li>(5,14)</li>
-        <li>(40,40)</li>
-        <li>(100000,100000)</li>
-      </points>
-    </postProcessCurve>
-  </StatDef>
+	<StatDef>
+		<defName>BoneAmount</defName>
+		<label>bone amount</label>
+		<description>The amount of bone yielded when butchering this creature.</description>
+		<category>BasicsPawn</category>
+		<defaultBaseValue>0</defaultBaseValue>
+		<minValue>0</minValue>
+		<toStringStyle>Integer</toStringStyle>
+		<hideAtValue>0</hideAtValue>
+		<parts>
+			<li Class="StatPart_BodySize" />
+			<li Class="StatPart_NaturalNotMissingBodyPartsCoverage" />
+		</parts>
+		<postProcessCurve>
+			<points>
+				<li>(0,0)</li>
+				<li>(5,14)</li>
+				<li>(40,40)</li>
+				<li>(100000,100000)</li>
+			</points>
+		</postProcessCurve>
+	</StatDef>
 </Defs>
