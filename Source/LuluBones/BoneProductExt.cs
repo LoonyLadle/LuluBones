@@ -11,6 +11,10 @@ namespace LoonyLadle.Bones
 
 		public override IEnumerable<string> ConfigErrors()
 		{
+			foreach (string error in base.ConfigErrors())
+			{
+				yield return error;
+			}
 			if (boneDef == null)
 			{
 				yield return "null boneDef";
