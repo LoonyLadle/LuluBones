@@ -32,11 +32,20 @@
 		</value>
 	</Operation>
 
-	<!-- Don't default allow bones to be used to make blunt weapons. -->
+	<!-- Don't default allow bones or chitin to be used to make blunt weapons. -->
 	<Operation Class="PatchOperationAdd">
 		<xpath>Defs/ThingDef[@Name="BaseMeleeWeapon_Blunt"]/recipeMaker/defaultIngredientFilter/disallowedThingDefs</xpath>
 		<value>
 			<li>LuluBones_Bone</li>
+			<li>LuluBones_Chitin</li>
+		</value>
+	</Operation>
+
+	<!-- Don't default allow chitin to be used to make sharp weapons. -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[@Name="BaseMeleeWeapon_Sharp"]/recipeMaker/defaultIngredientFilter/disallowedThingDefs</xpath>
+		<value>
+			<li>LuluBones_Chitin</li>
 		</value>
 	</Operation>
 
