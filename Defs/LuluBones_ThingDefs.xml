@@ -98,7 +98,7 @@
 			<soundMeleeHitSharp>MeleeHit_Wood</soundMeleeHitSharp>
 			<soundMeleeHitBlunt>MeleeHit_Wood</soundMeleeHitBlunt>
 			<statFactors>
-				<MaxHitPoints>1.4</MaxHitPoints>
+				<MaxHitPoints>1.2</MaxHitPoints>
 				<Beauty>0.5</Beauty>
 				<Flammability>0.5</Flammability>
 				<WorkToMake>1.6</WorkToMake>
