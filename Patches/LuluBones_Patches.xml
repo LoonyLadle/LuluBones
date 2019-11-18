@@ -16,11 +16,21 @@
 		</value>
 	</Operation>
 
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>Defs/ThingDef[defName = "Thrumbo"]</xpath>
+		<value>
+			<li Class = "LoonyLadle.Bones.BoneProductExt">
+				<boneDef>LuluBones_Thrumbone</boneDef>
+			</li>
+		</value>
+	</Operation>
+
 	<!-- Allow bone to be used as fuel wherever wood is. -->
 	<Operation Class="PatchOperationInsert">
 		<xpath>Defs/ThingDef/comps/li[@Class="CompProperties_Refuelable"]/fuelFilter/thingDefs/li[text()="WoodLog"]</xpath>
 		<value>
 			<li>LuluBones_Bone</li>
+			<li>LuluBones_Thrumbone</li>
 		</value>
 	</Operation>
 
@@ -29,6 +39,7 @@
 		<xpath>Defs/ThingSetMakerDef//li[text()="WoodLog"]</xpath>
 		<value>
 			<li>LuluBones_Bone</li>
+			<li>LuluBones_Thrumbone</li>
 		</value>
 	</Operation>
 
@@ -38,6 +49,7 @@
 		<value>
 			<li>LuluBones_Bone</li>
 			<li>LuluBones_Chitin</li>
+			<li>LuluBones_Thrumbone</li>
 		</value>
 	</Operation>
 
@@ -55,6 +67,7 @@
 		<value>
 			<li>LuluBones_Bone</li>
 			<li>LuluBones_Chitin</li>
+			<li>LuluBones_Thrumbone</li>
 		</value>
 	</Operation>
 

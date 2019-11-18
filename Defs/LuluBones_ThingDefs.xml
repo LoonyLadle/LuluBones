@@ -113,4 +113,38 @@
 			<li>ResourcesRaw</li>
 		</thingCategories>
 	</ThingDef>
+
+	<ThingDef ParentName="LuluBones_Bone">
+		<defName>LuluBones_Thrumbone</defName>
+		<label>thrumbone</label>
+		<description>Bone from a thrumbo. Light as a feather, nearly as strong as plasteel, and with a fetching purple coloration.</description>
+		<graphicData>
+			<color>(191,151,235)</color>
+		</graphicData>
+		<statBases>
+			<MarketValue>10</MarketValue>
+			<Mass>0.2</Mass>
+			<StuffPower_Armor_Sharp>1.14</StuffPower_Armor_Sharp>
+			<StuffPower_Armor_Blunt>0.69</StuffPower_Armor_Blunt>
+			<StuffPower_Armor_Heat>1.08</StuffPower_Armor_Heat>
+			<SharpDamageMultiplier>1.1</SharpDamageMultiplier>
+			<BluntDamageMultiplier>0.3</BluntDamageMultiplier>
+		</statBases>
+		<stuffProps>
+			<commonality>0.05</commonality>
+			<color>(191,151,235)</color>
+			<statFactors>
+				<MaxHitPoints>1.9</MaxHitPoints>
+				<Beauty>2</Beauty>
+				<Flammability>1</Flammability>
+				<WorkToMake>1.6</WorkToMake>
+				<WorkToBuild>1.6</WorkToBuild>
+				<DoorOpenSpeed>1.2</DoorOpenSpeed>
+				<MeleeWeapon_CooldownMultiplier>0.8</MeleeWeapon_CooldownMultiplier>
+			</statFactors>
+			<statOffsets>
+				<Beauty>6</Beauty>
+			</statOffsets>
+		</stuffProps>
+	</ThingDef>
 </Defs>
