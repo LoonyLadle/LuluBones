@@ -1,186 +1,100 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <Patch>
-  <Operation Class="PatchOperationSequence">
-    <operations>
 
-      <!-- Adds bones to standard base things. -->
-      <li Class="PatchOperationAdd">
-        <xpath>Defs/ThingDef[@Name="AnimalThingBase"]/statBases</xpath>
-        <value>
-          <BoneAmount>20</BoneAmount>
-        </value>
-      </li>
+	<!-- Adds bones to standard base things. -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[@Name="AnimalThingBase"]/statBases</xpath>
+		<value>
+			<BoneAmount>20</BoneAmount>
+		</value>
+	</Operation>
 
-      <li Class="PatchOperationAdd">
-        <xpath>Defs/ThingDef[@Name="BaseInsect"]/statBases</xpath>
-        <value>
-          <BoneAmount>50</BoneAmount>
-        </value>
-      </li>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[@Name="BaseInsect"]/statBases</xpath>
+		<value>
+			<BoneAmount>50</BoneAmount>
+		</value>
+	</Operation>
 
-      <!-- Allow bone to be used as fuel wherever wood is. -->
-      <li Class="PatchOperationInsert">
-        <xpath>Defs/ThingDef/comps/li[@Class="CompProperties_Refuelable"]/fuelFilter/thingDefs/li[text()="WoodLog"]</xpath>
-        <value>
-          <li>LuluBones_Bone</li>
-        </value>
-      </li>
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>Defs/ThingDef[defName="Thrumbo"]</xpath>
+		<value>
+			<li Class = "LoonyLadle.Bones.BoneProductExt">
+				<boneDef>LuluBones_Thrumbone</boneDef>
+			</li>
+		</value>
+	</Operation>
 
-      <!-- Groups bones with wood in ThingSetMakers; this mostly just prevents them from spawning in weapon stockpiles. -->
-      <li Class="PatchOperationInsert">
-        <xpath>Defs/ThingSetMakerDef//li[text()="WoodLog"]</xpath>
-        <value>
-          <li>LuluBones_Bone</li>
-        </value>
-      </li>
+	<!-- Allow bone to be used as fuel wherever wood is. -->
+	<Operation Class="PatchOperationInsert">
+		<xpath>Defs/ThingDef/comps/li[@Class="CompProperties_Refuelable"]/fuelFilter/thingDefs/li[text()="WoodLog"]</xpath>
+		<order>Append</order>
+		<value>
+			<li>LuluBones_Bone</li>
+			<li>LuluBones_Thrumbone</li>
+		</value>
+	</Operation>
 
-      <!-- Don't default allow bones to be used to make blunt weapons. -->
-      <li Class="PatchOperationAdd">
-        <xpath>Defs/ThingDef[@Name="BaseMeleeWeapon_Blunt"]/recipeMaker/defaultIngredientFilter/disallowedThingDefs</xpath>
-        <value>
-          <li>LuluBones_Bone</li>
-        </value>
-      </li>
+	<!-- Groups bones with wood in ThingSetMakers; this mostly just prevents them from spawning in weapon stockpiles. -->
+	<Operation Class="PatchOperationInsert">
+		<xpath>Defs/ThingSetMakerDef//li[text()="WoodLog"]</xpath>
+		<order>Append</order>
+		<value>
+			<li>LuluBones_Bone</li>
+			<li>LuluBones_Thrumbone</li>
+		</value>
+	</Operation>
 
-      <!-- Allow bone and chitin to be processed into chemfuel using the same recipe as for wood. -->
-      <li Class="PatchOperationAdd">
-        <xpath>Defs/RecipeDef[defName="Make_ChemfuelFromWood"]//thingDefs</xpath>
-        <value>
-          <li>LuluBones_Bone</li>
-          <li>LuluBones_Chitin</li>
-        </value>
-      </li>
+	<!-- Don't default allow bones or chitin to be used to make blunt weapons. -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[@Name="BaseMeleeWeapon_Blunt"]/recipeMaker/defaultIngredientFilter/disallowedThingDefs</xpath>
+		<value>
+			<li>LuluBones_Bone</li>
+			<li>LuluBones_Chitin</li>
+			<li>LuluBones_Thrumbone</li>
+		</value>
+	</Operation>
 
-      <!-- Allow mixing of ingredients when making chemfuel from wood. -->
-      <li Class="PatchOperationSequence">
-        <success>Always</success>
-        <operations>
-          <li Class="PatchOperationTest">
-            <xpath>Defs/RecipeDef[defName="Make_ChemfuelFromWood"]/allowMixingIngredients</xpath>
-            <success>Invert</success>
-          </li>
-          <li Class="PatchOperationAdd">
-            <xpath>Defs/RecipeDef[defName="Make_ChemfuelFromWood"]</xpath>
-            <value>
-              <allowMixingIngredients>true</allowMixingIngredients>
-            </value>
-          </li>
-        </operations>
-      </li>
+	<!-- Don't default allow chitin to be used to make sharp weapons. -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[@Name="BaseMeleeWeapon_Sharp"]/recipeMaker/defaultIngredientFilter/disallowedThingDefs</xpath>
+		<value>
+			<li>LuluBones_Chitin</li>
+		</value>
+	</Operation>
 
-      <!-- Allows woody materials to be used for knives; longswords can be wooden, why not knives?! -->
-      <li Class="PatchOperationSequence">
-        <success>Always</success>
-        <operations>
-          <li Class="PatchOperationTest">
-            <xpath>Defs/ThingDef[defName="MeleeWeapon_Knife"]/stuffCategories/li[text()="Woody"]</xpath>
-            <success>Invert</success>
-          </li>
-          <li Class="PatchOperationAdd">
-            <xpath>Defs/ThingDef[defName="MeleeWeapon_Knife"]/stuffCategories</xpath>
-            <value>
-              <li>Woody</li>
-            </value>
-          </li>
-        </operations>
-      </li>
+	<!-- Allow bone and chitin to be processed into chemfuel using the same recipe as for wood. -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/RecipeDef[defName="Make_ChemfuelFromWood"]//thingDefs</xpath>
+		<value>
+			<li>LuluBones_Bone</li>
+			<li>LuluBones_Chitin</li>
+			<li>LuluBones_Thrumbone</li>
+		</value>
+	</Operation>
 
-      <!-- Make campfires stuffed. -->
-      <li Class="PatchOperationSequence">
-        <success>Always</success>
-        <operations>
-          <li Class="PatchOperationTest">
-            <xpath>Defs/ThingDef[defName="Campfire"]/stuffCategories</xpath>
-            <success>Invert</success>
-          </li>
-          <li Class="PatchOperationAdd">
-            <xpath>Defs/ThingDef[defName="Campfire"]</xpath>
-            <value>
-              <costStuffCount>20</costStuffCount>
-              <stuffCategories>
-                <li>Woody</li>
-              </stuffCategories>
-            </value>
-          </li>
-          <li Class="PatchOperationRemove">
-            <xpath>Defs/ThingDef[defName="Campfire"]/costList</xpath>
-          </li>
-          <li Class="PatchOperationRemove">
-            <xpath>Defs/ThingDef[defName="Campfire"]/constructEffect</xpath>
-          </li>
-          <li Class="PatchOperationReplace">
-            <xpath>Defs/ThingDef[defName="Campfire"]/graphicData/texPath</xpath>
-            <value>
-              <texPath>Lulu/Bones/Stuffed/Campfire</texPath>
-            </value>
-          </li>
-        </operations>
-      </li>
+	<!-- Allow mixing of ingredients when making chemfuel from wood. -->
+	<Operation Class="PatchOperationConditional">
+		<success>Always</success>
+		<xpath>Defs/RecipeDef[defName="Make_ChemfuelFromWood"]/allowMixingIngredients</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/RecipeDef[defName="Make_ChemfuelFromWood"]</xpath>
+			<value>
+				<allowMixingIngredients>true</allowMixingIngredients>
+			</value>
+		</nomatch>
+	</Operation>
 
-      <!-- Make passive coolers stuffed. -->
-      <li Class="PatchOperationSequence">
-        <success>Always</success>
-        <operations>
-          <li Class="PatchOperationTest">
-            <xpath>Defs/ThingDef[defName="PassiveCooler"]/stuffCategories</xpath>
-            <success>Invert</success>
-          </li>
-          <li Class="PatchOperationAdd">
-            <xpath>Defs/ThingDef[defName="PassiveCooler"]</xpath>
-            <value>
-              <costStuffCount>50</costStuffCount>
-              <stuffCategories>
-                <li>Woody</li>
-              </stuffCategories>
-            </value>
-          </li>
-          <li Class="PatchOperationRemove">
-            <xpath>Defs/ThingDef[defName="PassiveCooler"]/costList</xpath>
-          </li>
-          <li Class="PatchOperationRemove">
-            <xpath>Defs/ThingDef[defName="PassiveCooler"]/constructEffect</xpath>
-          </li>
-          <li Class="PatchOperationReplace">
-            <xpath>Defs/ThingDef[defName="PassiveCooler"]/graphicData/texPath</xpath>
-            <value>
-              <texPath>Lulu/Bones/Stuffed/PassiveCooler</texPath>
-            </value>
-          </li>
-        </operations>
-      </li>
+	<!-- Allows woody materials to be used for knives; longswords can be wooden, why not knives?! -->
+	<Operation Class="PatchOperationConditional">
+		<success>Always</success>
+		<xpath>Defs/ThingDef[defName="MeleeWeapon_Knife"]/stuffCategories/li[text()="Woody"]</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="MeleeWeapon_Knife"]/stuffCategories</xpath>
+			<value>
+				<li>Woody</li>
+			</value>
+		</nomatch>
+	</Operation>
 
-      <!-- Make torch lamps stuffed. -->
-      <li Class="PatchOperationSequence">
-        <success>Always</success>
-        <operations>
-          <li Class="PatchOperationTest">
-            <xpath>Defs/ThingDef[defName="TorchLamp"]/stuffCategories</xpath>
-            <success>Invert</success>
-          </li>
-          <li Class="PatchOperationAdd">
-            <xpath>Defs/ThingDef[defName="TorchLamp"]</xpath>
-            <value>
-              <costStuffCount>20</costStuffCount>
-              <stuffCategories>
-                <li>Woody</li>
-              </stuffCategories>
-            </value>
-          </li>
-          <li Class="PatchOperationRemove">
-            <xpath>Defs/ThingDef[defName="TorchLamp"]/costList</xpath>
-          </li>
-          <li Class="PatchOperationRemove">
-            <xpath>Defs/ThingDef[defName="TorchLamp"]/constructEffect</xpath>
-          </li>
-          <li Class="PatchOperationReplace">
-            <xpath>Defs/ThingDef[defName="TorchLamp"]/graphicData/texPath</xpath>
-            <value>
-              <texPath>Lulu/Bones/Stuffed/TorchLamp</texPath>
-            </value>
-          </li>
-        </operations>
-      </li>
-
-    </operations>
-  </Operation>
 </Patch>
