@@ -64,7 +64,7 @@
 	<ThingDef ParentName="ResourceBase">
 		<defName>LuluBones_Chitin</defName>
 		<label>chitin</label>
-		<description>Chitin from the exoskeleton of a large insect. Useful for building strong structures and armor, but poorly suited for the creation of weapons. It cannot be burned unless first refined into chemfuel.</description>
+		<description>Chitin from the exoskeleton of a large insect. Useful for building strong structures and armor, but poorly suited for weapons. It cannot be burned unless first refined into chemfuel.</description>
 		<graphicData>
 			<texPath>Lulu/Bones/Chitin</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
@@ -78,13 +78,13 @@
 			<Mass>0.4</Mass>
 			<Flammability>1.0</Flammability>
 			<DeteriorationRate>0.5</DeteriorationRate>
-			<StuffPower_Armor_Sharp>1.03</StuffPower_Armor_Sharp>
+			<StuffPower_Armor_Sharp>1.08</StuffPower_Armor_Sharp>
 			<StuffPower_Armor_Blunt>0.54</StuffPower_Armor_Blunt>
 			<StuffPower_Armor_Heat>0.9</StuffPower_Armor_Heat>
 			<StuffPower_Insulation_Cold>4</StuffPower_Insulation_Cold>
 			<StuffPower_Insulation_Heat>8</StuffPower_Insulation_Heat>
-			<SharpDamageMultiplier>0.6</SharpDamageMultiplier>
-			<BluntDamageMultiplier>0.6</BluntDamageMultiplier>
+			<SharpDamageMultiplier>0.68</SharpDamageMultiplier>
+			<BluntDamageMultiplier>0.68</BluntDamageMultiplier>
 		</statBases>
 		<stuffProps>
 			<categories>
@@ -124,10 +124,10 @@
 		<statBases>
 			<MarketValue>10</MarketValue>
 			<Mass>0.2</Mass>
-			<StuffPower_Armor_Sharp>1.14</StuffPower_Armor_Sharp>
-			<StuffPower_Armor_Blunt>0.69</StuffPower_Armor_Blunt>
-			<StuffPower_Armor_Heat>1.08</StuffPower_Armor_Heat>
-			<SharpDamageMultiplier>1.1</SharpDamageMultiplier>
+			<StuffPower_Armor_Sharp>1.16</StuffPower_Armor_Sharp>
+			<StuffPower_Armor_Blunt>0.6</StuffPower_Armor_Blunt>
+			<StuffPower_Armor_Heat>0.9</StuffPower_Armor_Heat>
+			<SharpDamageMultiplier>0.9</SharpDamageMultiplier>
 			<BluntDamageMultiplier>0.3</BluntDamageMultiplier>
 		</statBases>
 		<stuffProps>
@@ -140,7 +140,7 @@
 				<WorkToMake>1.6</WorkToMake>
 				<WorkToBuild>1.6</WorkToBuild>
 				<DoorOpenSpeed>1.2</DoorOpenSpeed>
-				<MeleeWeapon_CooldownMultiplier>0.8</MeleeWeapon_CooldownMultiplier>
+				<MeleeWeapon_CooldownMultiplier>0.7</MeleeWeapon_CooldownMultiplier>
 			</statFactors>
 			<statOffsets>
 				<Beauty>6</Beauty>
