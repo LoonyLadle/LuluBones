@@ -20,11 +20,11 @@
 			<DeteriorationRate>0.5</DeteriorationRate>
 			<StuffPower_Armor_Sharp>0.54</StuffPower_Armor_Sharp>
 			<StuffPower_Armor_Blunt>0.54</StuffPower_Armor_Blunt>
-			<StuffPower_Armor_Heat>0.9</StuffPower_Armor_Heat>
+			<StuffPower_Armor_Heat>0.40</StuffPower_Armor_Heat>
 			<StuffPower_Insulation_Cold>4</StuffPower_Insulation_Cold>
 			<StuffPower_Insulation_Heat>8</StuffPower_Insulation_Heat>
 			<SharpDamageMultiplier>0.9</SharpDamageMultiplier>
-			<BluntDamageMultiplier>0.45</BluntDamageMultiplier>
+			<BluntDamageMultiplier>0.40</BluntDamageMultiplier>
 		</statBases>
 		<stuffProps>
 			<categories>
@@ -59,6 +59,7 @@
 				<cooldownTime>2</cooldownTime>
 			</li>
 		</tools>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
 	</ThingDef>
 
 	<ThingDef ParentName="ResourceBase">
@@ -112,6 +113,7 @@
 		<thingCategories>
 			<li>ResourcesRaw</li>
 		</thingCategories>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
 	</ThingDef>
 
 	<ThingDef ParentName="LuluBones_Bone">
