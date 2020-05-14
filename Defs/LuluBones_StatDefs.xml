@@ -21,5 +21,6 @@
 				<li>(100000,100000)</li>
 			</points>
 		</postProcessCurve>
+		<displayPriorityInCategory>3550</displayPriorityInCategory>
 	</StatDef>
 </Defs>
