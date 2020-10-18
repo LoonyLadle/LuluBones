@@ -26,9 +26,9 @@
 	</Operation>
 
 	<!-- Allow bone to be used as fuel wherever wood is. -->
-	<Operation Class="PatchOperationInsert">
-		<xpath>Defs/ThingDef/comps/li[@Class="CompProperties_Refuelable"]/fuelFilter/thingDefs/li[text()="WoodLog"]</xpath>
-		<order>Append</order>
+	<!--Simple Chains: Lumber support-->
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef/comps/li[@Class="CompProperties_Refuelable" and fuelFilter/thingDefs/li[text()="WoodLog" or text()="Owl_Firewood"]]/fuelFilter/thingDefs</xpath>
 		<value>
 			<li>LuluBones_Bone</li>
 			<li>LuluBones_Thrumbone</li>
